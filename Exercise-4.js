@@ -20,26 +20,26 @@ function cariModus(arr) {
     }
 
     //mencari Modus
-    var MAX = tampung[0][1], indexMax = -1;
-    for(var i=1; i<tampung.length; i++) {
-      if(tampung[i][1] > MAX) {
+    var indexMax = 0;
+    var MAX = tampung[indexMax][0];
+    for(var i=0; i<tampung.length; i++) {
+      if(tampung[i][1] > tampung[indexMax][1]) {
         indexMax = i;
         MAX = tampung[indexMax][0];
-        // console.log('MAX = ', MAX);
       }
     }
 
     // console.log(tampung)
-    if(tampung.length === 1){
-      return -1 ; //untuk jika modus hanya ada 1 nilai
+    if(tampung.length === 1 || tampung[indexMax][1] === 1){ //untuk jika modus hanya ada 1 nilai atau tidak ada modus
+      return -1 ; 
     }else{
       return MAX;
     }
 }
   
   // TEST CASES
-  console.log(cariModus([10, 4, 5, 2, 4])); // 4 t
-  console.log(cariModus([5, 10, 10, 6, 5])); // 5 f
-  console.log(cariModus([10, 3, 1, 2, 5])); // -1 f
-  console.log(cariModus([1, 2, 3, 3, 4, 5])); // 3 t
-  console.log(cariModus([7, 7, 7, 7, 7])); // -1 t
+  console.log(cariModus([10, 4, 5, 2, 4])); // 4 
+  console.log(cariModus([5, 10, 10, 6, 5])); // 5
+  console.log(cariModus([10, 3, 1, 2, 5])); // -1
+  console.log(cariModus([1, 2, 3, 3, 4, 5])); // 3
+  console.log(cariModus([7, 7, 7, 7, 7])); // -1
