@@ -9,7 +9,7 @@ function changeMe(arr) {
             gender: arr[i][2],
             age: 2019 - arr[i][3]
         };
-        if(typeof arr[i][3] != 'number' || arr[i][3] > 2019) {
+        if(typeof arr[i][3] != 'number' || arr[i][3] > 2019 ) {
             bio.age = 'Invalid Birth Year';
         }
         console.log(bio);
