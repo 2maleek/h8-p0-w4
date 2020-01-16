@@ -2,6 +2,12 @@
 *PSEUDOCODE
 
 *buat var counter //untuk menghitung berapa banyak angka pembagi yang menghasilkan angka bulat
+*Lakukan pengulangan sebanyak angka
+*Jika angka % i === 0
+* Counter++
+
+* Jika counter > 2 maka bukan angka prima (return false)
+* Jika <= 2 maka angka prima (return true)
 */
 
 function angkaPrima(angka) {
